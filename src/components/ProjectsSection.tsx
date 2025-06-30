@@ -17,7 +17,7 @@ const ProjectsSection = () => {
     {
       title: "AI-Powered Mental Health Chatbot",
       description: "Designed and deployed a conversational AI chatbot focused on mental wellness support, implementing natural language processing and empathetic response generation.",
-      tech: ["Python", "Hugging Face", "Transformers", "Flask", "AI/ML"],
+      tech: ["Python", "Hugging Face", "Transformers", "Flask", "AI/ML", "Groq"],
       liveUrl: "#",
       githubUrl: "https://github.com/AvinashCoder31/mental-health-chatbot",
       status: "Completed"
