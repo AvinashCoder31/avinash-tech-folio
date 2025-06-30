@@ -88,7 +88,7 @@ const ContactSection = () => {
                   <Github size={20} />
                 </a>
                 <a 
-                  href="https://linkedin.com/in/avinash-r" 
+                  href="https://www.linkedin.com/in/avinash312006/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center justify-center w-12 h-12 bg-primary/10 hover:bg-primary hover:text-primary-foreground text-primary rounded-lg transition-colors"
@@ -96,7 +96,7 @@ const ContactSection = () => {
                   <Linkedin size={20} />
                 </a>
                 <a 
-                  href="https://t.me/avinashcoder" 
+                  href="#" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center justify-center w-12 h-12 bg-primary/10 hover:bg-primary hover:text-primary-foreground text-primary rounded-lg transition-colors"
