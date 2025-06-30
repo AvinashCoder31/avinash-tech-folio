@@ -19,8 +19,12 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="animate-float mb-8">
           <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-r from-primary to-blue-400 p-1 animate-glow">
-            <div className="w-full h-full rounded-full bg-background flex items-center justify-center">
-              <span className="text-4xl font-bold text-primary">A.R</span>
+            <div className="w-full h-full rounded-full overflow-hidden">
+              <img 
+                src="/lovable-uploads/54822620-c326-4787-8808-6507b239a467.png" 
+                alt="Avinash R - Profile Photo"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
