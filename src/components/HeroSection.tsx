@@ -12,13 +12,13 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-4">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-blue-600/10"></div>
       
-      <div className="container mx-auto px-4 text-center relative z-10">
-        <div className="animate-float mb-8">
-          <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-r from-primary to-blue-400 p-1 animate-glow">
+      <div className="container mx-auto text-center relative z-10 max-w-4xl">
+        <div className="animate-float mb-6 md:mb-8">
+          <div className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 mx-auto rounded-full bg-gradient-to-r from-primary to-blue-400 p-1 animate-glow">
             <div className="w-full h-full rounded-full overflow-hidden">
               <img 
                 src="/lovable-uploads/54822620-c326-4787-8808-6507b239a467.png" 
@@ -29,23 +29,23 @@ const HeroSection = () => {
           </div>
         </div>
         
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 md:mb-4 px-2">
           Hi, I'm <span className="bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">Avinash R</span>
         </h1>
         
-        <p className="text-xl md:text-2xl text-muted-foreground mb-6">
+        <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-4 md:mb-6 px-2">
           AI & Full-Stack Developer
         </p>
         
-        <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+        <p className="text-sm sm:text-base md:text-lg text-muted-foreground mb-6 md:mb-8 max-w-2xl mx-auto px-4 leading-relaxed">
           B.Tech IT student specializing in Python-based AI, automation, and cybersecurity. 
           Building the future with code, one project at a time.
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+        <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center mb-8 md:mb-12 px-4">
           <Button 
             size="lg" 
-            className="bg-primary hover:bg-primary/90 text-primary-foreground"
+            className="bg-primary hover:bg-primary/90 text-primary-foreground w-full sm:w-auto"
             onClick={() => scrollToSection('projects')}
           >
             View My Work
@@ -54,46 +54,46 @@ const HeroSection = () => {
           <Button 
             size="lg" 
             variant="outline"
-            className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+            className="border-primary text-primary hover:bg-primary hover:text-primary-foreground w-full sm:w-auto"
             onClick={() => scrollToSection('contact')}
           >
             Get In Touch
           </Button>
         </div>
         
-        <div className="flex justify-center space-x-6 mb-8">
+        <div className="flex justify-center space-x-6 mb-6 md:mb-8">
           <a 
             href="https://github.com/AvinashCoder31" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="text-muted-foreground hover:text-primary transition-colors"
+            className="text-muted-foreground hover:text-primary transition-colors p-2"
           >
-            <Github size={24} />
+            <Github size={20} className="sm:w-6 sm:h-6" />
           </a>
           <a 
             href="https://www.linkedin.com/in/avinash312006/" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="text-muted-foreground hover:text-primary transition-colors"
+            className="text-muted-foreground hover:text-primary transition-colors p-2"
           >
-            <Linkedin size={24} />
+            <Linkedin size={20} className="sm:w-6 sm:h-6" />
           </a>
           <a 
             href="#" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="text-muted-foreground hover:text-primary transition-colors"
+            className="text-muted-foreground hover:text-primary transition-colors p-2"
           >
-            <Telegram size={24} />
+            <Telegram size={20} className="sm:w-6 sm:h-6" />
           </a>
         </div>
       </div>
       
       <button 
         onClick={() => scrollToSection('about')}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-muted-foreground hover:text-primary transition-colors animate-bounce"
+        className="absolute bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 text-muted-foreground hover:text-primary transition-colors animate-bounce"
       >
-        <ArrowDown size={24} />
+        <ArrowDown size={20} className="sm:w-6 sm:h-6" />
       </button>
     </section>
   );

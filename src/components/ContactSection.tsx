@@ -44,73 +44,73 @@ const ContactSection = () => {
   );
 
   return (
-    <section id="contact" className="py-20 bg-muted/20">
-      <div className="container mx-auto px-4">
+    <section id="contact" className="py-16 md:py-20 bg-muted/20 px-4">
+      <div className="container mx-auto">
         <h2 className="section-heading">Get In Touch</h2>
         
-        <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 max-w-6xl mx-auto">
           <div>
-            <Card className="p-8 bg-card border-border h-full">
-              <h3 className="text-2xl font-bold text-primary mb-6">Let's Connect</h3>
+            <Card className="p-6 md:p-8 bg-card border-border h-full">
+              <h3 className="text-xl md:text-2xl font-bold text-primary mb-4 md:mb-6">Let's Connect</h3>
               
-              <div className="space-y-6">
+              <div className="space-y-4 md:space-y-6">
                 <div>
-                  <h4 className="font-semibold text-foreground mb-2">📧 Email</h4>
-                  <p className="text-muted-foreground">avinashraja31032006@gmail.com</p>
+                  <h4 className="font-semibold text-foreground mb-2 text-sm md:text-base">📧 Email</h4>
+                  <p className="text-muted-foreground text-sm md:text-base break-all">avinashraja31032006@gmail.com</p>
                 </div>
                 
                 <div>
-                  <h4 className="font-semibold text-foreground mb-2">📱 Phone</h4>
-                  <p className="text-muted-foreground">+91-93857 03020</p>
+                  <h4 className="font-semibold text-foreground mb-2 text-sm md:text-base">📱 Phone</h4>
+                  <p className="text-muted-foreground text-sm md:text-base">+91-93857 03020</p>
                 </div>
                 
                 <div>
-                  <h4 className="font-semibold text-foreground mb-2">📍 Location</h4>
-                  <p className="text-muted-foreground">Puducherry, India</p>
+                  <h4 className="font-semibold text-foreground mb-2 text-sm md:text-base">📍 Location</h4>
+                  <p className="text-muted-foreground text-sm md:text-base">Puducherry, India</p>
                 </div>
                 
                 <div>
-                  <h4 className="font-semibold text-foreground mb-2">🗓️ Availability</h4>
-                  <p className="text-muted-foreground">
+                  <h4 className="font-semibold text-foreground mb-2 text-sm md:text-base">🗓️ Availability</h4>
+                  <p className="text-muted-foreground text-sm md:text-base">
                     Available for 4-week onsite internship<br />
                     <span className="text-primary font-medium">June 30 – July 30, 2025</span>
                   </p>
                 </div>
               </div>
               
-              <div className="flex space-x-4 mt-8">
+              <div className="flex space-x-4 mt-6 md:mt-8">
                 <a 
                   href="https://github.com/AvinashCoder31" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center w-12 h-12 bg-primary/10 hover:bg-primary hover:text-primary-foreground text-primary rounded-lg transition-colors"
+                  className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 bg-primary/10 hover:bg-primary hover:text-primary-foreground text-primary rounded-lg transition-colors"
                 >
-                  <Github size={20} />
+                  <Github size={18} className="md:w-5 md:h-5" />
                 </a>
                 <a 
                   href="https://www.linkedin.com/in/avinash312006/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center w-12 h-12 bg-primary/10 hover:bg-primary hover:text-primary-foreground text-primary rounded-lg transition-colors"
+                  className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 bg-primary/10 hover:bg-primary hover:text-primary-foreground text-primary rounded-lg transition-colors"
                 >
-                  <Linkedin size={20} />
+                  <Linkedin size={18} className="md:w-5 md:h-5" />
                 </a>
                 <a 
                   href="#" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center w-12 h-12 bg-primary/10 hover:bg-primary hover:text-primary-foreground text-primary rounded-lg transition-colors"
+                  className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 bg-primary/10 hover:bg-primary hover:text-primary-foreground text-primary rounded-lg transition-colors"
                 >
-                  <Telegram size={20} />
+                  <Telegram size={18} />
                 </a>
               </div>
             </Card>
           </div>
           
-          <Card className="p-8 bg-card border-border">
-            <h3 className="text-2xl font-bold text-primary mb-6">Send a Message</h3>
+          <Card className="p-6 md:p-8 bg-card border-border">
+            <h3 className="text-xl md:text-2xl font-bold text-primary mb-4 md:mb-6">Send a Message</h3>
             
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
               <div>
                 <Input
                   name="name"
@@ -141,7 +141,7 @@ const ContactSection = () => {
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  rows={5}
+                  rows={4}
                   className="bg-background border-border focus:border-primary resize-none"
                 />
               </div>

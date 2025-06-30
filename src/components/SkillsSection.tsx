@@ -30,17 +30,17 @@ const SkillsSection = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-muted/20">
-      <div className="container mx-auto px-4">
+    <section id="skills" className="py-16 md:py-20 bg-muted/20 px-4">
+      <div className="container mx-auto">
         <h2 className="section-heading">Skills & Technologies</h2>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
           {skillCategories.map((category, index) => (
-            <div key={index} className="bg-card border border-border rounded-lg p-6">
-              <h3 className="text-xl font-bold text-primary mb-4">{category.title}</h3>
+            <div key={index} className="bg-card border border-border rounded-lg p-4 md:p-6">
+              <h3 className="text-lg md:text-xl font-bold text-primary mb-3 md:mb-4">{category.title}</h3>
               <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill, skillIndex) => (
-                  <span key={skillIndex} className="skill-tag">
+                  <span key={skillIndex} className="skill-tag text-xs md:text-sm">
                     {skill}
                   </span>
                 ))}
@@ -49,12 +49,12 @@ const SkillsSection = () => {
           ))}
         </div>
         
-        <div className="mt-12 text-center">
-          <div className="bg-card border border-primary/20 rounded-lg p-6 inline-block">
-            <h3 className="text-lg font-bold text-primary mb-2">Currently Learning</h3>
+        <div className="mt-8 md:mt-12 text-center">
+          <div className="bg-card border border-primary/20 rounded-lg p-4 md:p-6 inline-block mx-4">
+            <h3 className="text-base md:text-lg font-bold text-primary mb-2">Currently Learning</h3>
             <div className="flex flex-wrap gap-2 justify-center">
               {["Agentic AI Systems", "Advanced LangChain", "n8n Automation", "Flowise"].map((skill, index) => (
-                <span key={index} className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium border border-primary/30 animate-pulse">
+                <span key={index} className="px-2 md:px-3 py-1 bg-primary/10 text-primary rounded-full text-xs md:text-sm font-medium border border-primary/30 animate-pulse">
                   {skill}
                 </span>
               ))}

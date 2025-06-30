@@ -33,18 +33,18 @@ const ProjectsSection = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="projects" className="py-16 md:py-20 bg-background px-4">
+      <div className="container mx-auto">
         <h2 className="section-heading">Featured Projects</h2>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
           {projects.map((project, index) => (
             <Card key={index} className="project-card group">
               <div className="flex justify-between items-start mb-4">
-                <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
+                <h3 className="text-lg md:text-xl font-bold text-foreground group-hover:text-primary transition-colors pr-2">
                   {project.title}
                 </h3>
-                <span className={`px-2 py-1 text-xs rounded-full ${
+                <span className={`px-2 py-1 text-xs rounded-full whitespace-nowrap ${
                   project.status === 'Live' 
                     ? 'bg-green-500/20 text-green-400 border border-green-500/30' 
                     : project.status === 'In Progress'
@@ -55,11 +55,11 @@ const ProjectsSection = () => {
                 </span>
               </div>
               
-              <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
+              <p className="text-muted-foreground mb-4 text-xs md:text-sm leading-relaxed">
                 {project.description}
               </p>
               
-              <div className="flex flex-wrap gap-2 mb-6">
+              <div className="flex flex-wrap gap-1 md:gap-2 mb-4 md:mb-6">
                 {project.tech.map((tech, techIndex) => (
                   <span key={techIndex} className="px-2 py-1 bg-secondary/50 text-secondary-foreground rounded text-xs">
                     {tech}
@@ -67,14 +67,14 @@ const ProjectsSection = () => {
                 ))}
               </div>
               
-              <div className="flex gap-3">
+              <div className="flex flex-col sm:flex-row gap-2 md:gap-3">
                 {project.liveUrl !== "#" && (
                   <Button 
                     size="sm" 
-                    className="flex-1 bg-primary hover:bg-primary/90"
+                    className="flex-1 bg-primary hover:bg-primary/90 text-xs md:text-sm"
                     onClick={() => window.open(project.liveUrl, '_blank')}
                   >
-                    <ArrowRight size={16} className="mr-2" />
+                    <ArrowRight size={14} className="mr-1 md:mr-2" />
                     Live Demo
                   </Button>
                 )}
@@ -83,10 +83,10 @@ const ProjectsSection = () => {
                   <Button 
                     size="sm" 
                     variant="outline" 
-                    className="flex-1 border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                    className="flex-1 border-primary text-primary hover:bg-primary hover:text-primary-foreground text-xs md:text-sm"
                     onClick={() => window.open(project.githubUrl, '_blank')}
                   >
-                    <Github size={16} className="mr-2" />
+                    <Github size={14} className="mr-1 md:mr-2" />
                     Code
                   </Button>
                 )}
@@ -95,15 +95,15 @@ const ProjectsSection = () => {
           ))}
         </div>
         
-        <div className="text-center mt-12">
+        <div className="text-center mt-8 md:mt-12">
           <Button 
             variant="outline" 
             size="lg"
-            className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+            className="border-primary text-primary hover:bg-primary hover:text-primary-foreground mx-4"
             onClick={() => window.open('https://github.com/AvinashCoder31', '_blank')}
           >
-            <Github size={20} className="mr-2" />
-            View All Projects on GitHub
+            <Github size={16} className="mr-2" />
+            <span className="text-sm md:text-base">View All Projects on GitHub</span>
           </Button>
         </div>
       </div>

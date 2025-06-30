@@ -1,8 +1,10 @@
 
 import React, { useState, useEffect } from 'react';
+import { Menu, X } from 'lucide-react';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,6 +20,7 @@ const Navigation = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+    setIsMobileMenuOpen(false);
   };
 
   return (
@@ -26,10 +29,11 @@ const Navigation = () => {
     }`}>
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
-          <div className="text-xl font-bold text-primary">
+          <div className="text-lg sm:text-xl font-bold text-primary">
             &lt;Avinash.R /&gt;
           </div>
           
+          {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-6">
             {['about', 'skills', 'projects', 'contact'].map((section) => (
               <button
@@ -41,7 +45,32 @@ const Navigation = () => {
               </button>
             ))}
           </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden text-muted-foreground hover:text-primary transition-colors"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
+
+        {/* Mobile Navigation Menu */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden mt-4 pb-4 border-t border-border">
+            <div className="flex flex-col space-y-4 pt-4">
+              {['about', 'skills', 'projects', 'contact'].map((section) => (
+                <button
+                  key={section}
+                  onClick={() => scrollToSection(section)}
+                  className="text-muted-foreground hover:text-primary transition-colors capitalize text-left"
+                >
+                  {section}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   );
