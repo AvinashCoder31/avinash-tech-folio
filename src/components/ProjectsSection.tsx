@@ -9,7 +9,7 @@ const ProjectsSection = () => {
     {
       title: "JIGYASA 2025 - National Technical Symposium",
       description: "Contributed to building and managing the official website for a national-level technical symposium, handling content management and user experience optimization.",
-      tech: ["React", "Vite", "Tailwind CSS", "Vercel"],
+      tech: ["React", "Vite", "Node", "Tailwind CSS", "Vercel"],
       liveUrl: "https://jigyasa2025.vercel.app",
       githubUrl: "#",
       status: "Live"
